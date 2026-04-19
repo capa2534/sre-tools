@@ -2,6 +2,23 @@
 
 CLI tools built in Go for day-to-day SRE work. Built as a learning project to develop Go skills in a real Kubernetes/observability context.
 
+
+---
+
+## Infrastructure
+
+### AWS
+- EC2 t3i-flex.large
+- EBS 50GB
+
+### Kubernetes
+- k3s single-node
+
+### Observability Stack
+- Grafana
+- Loki + Promtail
+- Prometheus
+- Alertmanager
 ---
 
 ## podcheck
