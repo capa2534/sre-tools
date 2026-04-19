@@ -1,0 +1,29 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: clientupgrades.sre.io
+spec:
+  group: sre.io
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                clientName:
+                  type: string
+                targetVersion:
+                  type: string
+                status:
+                  type: string
+                  enum: ["pending", "in-progress", "completed", "failed"]
+  scope: Namespaced
+  names:
+    plural: clientupgrades
+    singular: clientupgrade
+    kind: ClientUpgrade

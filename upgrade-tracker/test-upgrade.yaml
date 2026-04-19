@@ -1,0 +1,9 @@
+apiVersion: sre.io/v1
+kind: ClientUpgrade
+metadata:
+  name: client-abc
+  namespace: default 
+spec: 
+  clientName: client-abc
+  targetVersion: "1.3.0"
+  status: pending
